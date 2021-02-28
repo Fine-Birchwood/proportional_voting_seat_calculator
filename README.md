@@ -3,4 +3,4 @@ This is a program that calculates elections according to the Swedish law of prop
 
 
 
-#How does proportional elections work?
+# How does proportional elections work?
