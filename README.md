@@ -3,7 +3,7 @@ This is a program that calculates elections according to the Swedish law of prop
 
 
 
-# How does proportional elections work?
+# How does proportional voting work?
 The Law on Proportional Voting (SFS 1992:339) regulates how proportional elections are to be conducted in Sweden. 
 It is used in elections within, for example, municipalities, regions, and associations when multiple individuals are to be elected to a body, such as a committee or board. 
 The purpose of the law is to ensure that the distribution of seats or positions reflects the election results, i.e., the distribution of votes among different parties or groups. 
