@@ -63,11 +63,11 @@ while True:
             print(f'The votes for round {counter} is as following')
             print(' ')
 
-            print(f"{'Item':<15} {'Value'}")
-            print("-" * 20)
+            print(f"{'Item':<25} {'Value'}")
+            print("-" * 35)
 
             for item, value in zip(party_list, party_votes):
-                print(f"{item:<15} {value:.2f}")
+                print(f"{item:<25} {value:.2f}")
 
             print(' ')
 
@@ -92,11 +92,11 @@ while True:
             print(f'The votes for round {counter} is as following')
             print(' ')
 
-            print(f"{'Item':<15} {'Value'}")
-            print("-" * 20)
+            print(f"{'Item':<25} {'Value'}")
+            print("-" * 35)
 
             for item, value in zip(party_list, party_votes_dummy):
-                print(f"{item:<15} {value:.2f}")
+                print(f"{item:<25} {value:.2f}")
 
             print(' ')
 
@@ -117,10 +117,10 @@ highest_occurrence = max(occurrences.items(), key=lambda x: x[1])
 
 time.sleep(3)
 
-print(f"{'Party/group':<15} {'Count'}")
-print("-" * 25)
+print(f"{'Party/group':<25} {'Count'}")
+print("-" * 35)
 for item, count in sorted_occurrences:
-    print(f"{item:<15} {count}")
+    print(f"{item:<25} {count}")
 
 print(' ')
 print(f'The party/group with the highest number of won seats are {highest_occurrence[0]} with {highest_occurrence[1]} seats.')
