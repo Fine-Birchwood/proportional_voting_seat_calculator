@@ -1,7 +1,7 @@
 import time
 import seat_calculation
 
-# Lists used throughout this program
+# Empty lists used throughout this program
 party_list = []
 party_votes = []
 quota_list = []
@@ -16,7 +16,7 @@ print('The board has', number_of_seats, 'seats')
 print('The board has', number_of_elected_parties, 'elected parties')
 print(' ')
 
-print(f'Thanks for the information. Please input party/group name and their number of votes')
+print(f'Thanks for the information. Please input party/group name and their number of votes.')
 print(' ')
 
 time.sleep(2)
@@ -38,10 +38,12 @@ print(f'Simulating each round...')
 print(' ')
 time.sleep(3)
 
-#This function ensures that everything is correctly formatted. 
+#This function ensures that everything is correctly formattede before it's submitted to the seat calculation function.
+
 for i in range(len(party_votes)):
     party_votes[i] = party_votes[i] / quota_list[i] 
 
+#This calls the seat calculation function from seat_calculation.py.
 
 seat_calculation.calculation(party_list, party_votes, quota_list, number_of_elected_parties, number_of_seats, results_list)
 

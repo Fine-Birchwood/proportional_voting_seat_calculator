@@ -2,12 +2,17 @@ import random
 
 def calculation(party_list, party_votes, quota_list, number_of_elected_parties, number_of_seats, results_list):
    
+
+    # Counter used to 
     counter = 0
 
-    #This function go through and calculates who has one each seat.
+    # This function go through and calculates who has won each seat.
+    
     while True:
+    
         if counter < number_of_seats:
             
+            # Calculates the maximum value for the first seat. 
             if counter == 0: 
                 max_value = max(party_votes)
                 max_indices = [i for i, value in enumerate(party_votes) if value == max_value]
@@ -31,7 +36,7 @@ def calculation(party_list, party_votes, quota_list, number_of_elected_parties, 
                 print(f'The winner of the round is {party_list[selected_index]}')
                 print(' ')
 
-
+            # Calculates the maximum value for the rest of the seats. 
             else:
                 party_votes_dummy = party_votes.copy()
 
@@ -64,4 +69,3 @@ def calculation(party_list, party_votes, quota_list, number_of_elected_parties, 
             break
 
     return
-
