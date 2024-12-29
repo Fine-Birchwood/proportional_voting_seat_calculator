@@ -3,10 +3,7 @@ import seat_calculation
 import board_submission_GUI
 import party_data_collection
 
-# Lists used throughout this program
-party_list = []
-party_votes = []
-quota_list = []
+# Results list
 results_list = []
 
 # Creates a GUI where the user describes the board and how many elected parties are participating in the election. 
@@ -23,11 +20,10 @@ for i in range(len(party_votes)):
     party_votes[i] = party_votes[i] / quota_list[i] 
 
 
-seat_calculation.calculation(party_list, party_votes, quota_list, number_of_elected_parties, number_of_seats, results_list)
+# This calculates 
+results_list = seat_calculation.calculation(party_list, party_votes, quota_list, number_of_seats)
 
 
-print('Calculating the distribution of seats...')
-print(' ')
 
 
 occurrences = {item: results_list.count(item) for item in party_list}
