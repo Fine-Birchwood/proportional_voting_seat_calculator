@@ -48,7 +48,7 @@ def collect_party_data(number_of_elected_parties):
             print("Party List:", party_list)
             print("Votes List:", party_votes)
             print("Quota List:", quota_list)
-            root.quit()  # Close the window after collecting the required number of entries
+            root.destroy()  # Destroys the window after collecting the required number of entries
         else:
             print(f"{len(party_list)} of {number_of_elected_parties} parties entered so far.")
 
@@ -61,11 +61,3 @@ def collect_party_data(number_of_elected_parties):
 
     # Return the lists after data collection is complete
     return party_list, party_votes, quota_list
-
-# Call the function and get the results
-party_list, party_votes, quota_list = collect_party_data()
-
-# Output the lists
-print("Final Party List:", party_list)
-print("Final Votes List:", party_votes)
-print("Final Quota List:", quota_list)

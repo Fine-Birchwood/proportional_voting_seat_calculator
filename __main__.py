@@ -1,6 +1,7 @@
 import time
 import seat_calculation
 import board_submission_GUI
+import party_data_collection
 
 # Lists used throughout this program
 party_list = []
@@ -12,28 +13,10 @@ results_list = []
 
 number_of_seats, number_of_elected_parties = board_submission_GUI.create_and_run_gui()
 
+# Creates a GUI where the user inputs the name of the party/group and the number of votes the party/group has.
 
+party_list, party_votes, quota_list = party_data_collection.collect_party_data(number_of_elected_parties)
 
-print(f'Thanks for the information. Please input party/group name and their number of votes')
-print(' ')
-
-time.sleep(2)
-
-#This function creates two lists that will be used to count the seats per party/group. 
-while True:
-    new_party = str(input('What is the party’s or group’s name? '))
-    party_list.append(new_party)
-    votes = int(input('How many votes did the party/group get? '))
-    party_votes.append(votes)
-    quota_list.append(1)
-    print(' ')
-
-    if len(party_list) >= number_of_elected_parties:
-        break
-
-print(f'Simulating each round...')
-print(' ')
-time.sleep(3)
 
 #This function ensures that everything is correctly formatted. 
 for i in range(len(party_votes)):
