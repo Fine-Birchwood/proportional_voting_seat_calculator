@@ -1,22 +1,20 @@
 import time
 import seat_calculation
+import board_submission_GUI
 
-# Empty lists used throughout this program
+# Lists used throughout this program
 party_list = []
 party_votes = []
 quota_list = []
 results_list = []
 
-# Introductory questions regarding the current board
-number_of_seats = int(input('How many seats are there in the current board? '))
-number_of_elected_parties = int(input('How many parties have been elected to the current board? '))
-print(' ')
+# Creates a GUI where the user describes the board and how many elected parties are participating in the election. 
 
-print('The board has', number_of_seats, 'seats')
-print('The board has', number_of_elected_parties, 'elected parties')
-print(' ')
+number_of_seats, number_of_elected_parties = board_submission_GUI.create_and_run_gui()
 
-print(f'Thanks for the information. Please input party/group name and their number of votes.')
+
+
+print(f'Thanks for the information. Please input party/group name and their number of votes')
 print(' ')
 
 time.sleep(2)
@@ -33,17 +31,14 @@ while True:
     if len(party_list) >= number_of_elected_parties:
         break
 
-
 print(f'Simulating each round...')
 print(' ')
 time.sleep(3)
 
-#This function ensures that everything is correctly formattede before it's submitted to the seat calculation function.
-
+#This function ensures that everything is correctly formatted. 
 for i in range(len(party_votes)):
     party_votes[i] = party_votes[i] / quota_list[i] 
 
-#This calls the seat calculation function from seat_calculation.py.
 
 seat_calculation.calculation(party_list, party_votes, quota_list, number_of_elected_parties, number_of_seats, results_list)
 
